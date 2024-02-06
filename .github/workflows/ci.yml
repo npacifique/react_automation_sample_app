@@ -30,14 +30,14 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: |
-          # cd .\front-end\
+          # cd ./front-end
           npm ci
           npm run build
       - name: Run component tests
         run: |
-          # cd .\front-end\
+          # cd ./front-end
           npm run test
       - name: Start the app
         run: |
-          # cd .\front-end\
+          # cd ./front-end
           npm start & npx wait-on -timeout 600000
